@@ -1,0 +1,20 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "go.testEnvVars": {
+        "POSTGRES_HOST": "localhost",
+        "POSTGRES_PORT": "55432",
+        "POSTGRES_DB": "akh",
+        "POSTGRES_USER": "akh",
+        "POSTGRES_PASSWORD": "akh",
+        "POSTGRES_SSL_MODE": "disable"
+    },
+    "go.testFlags": [
+        "-v"
+    ],
+    "go.testTimeout": "30s"
+}
