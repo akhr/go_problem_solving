@@ -22,6 +22,10 @@ func (s *Stack) Pop() interface{} {
 	return item
 }
 
+func (s *Stack) Peek() interface{} {
+	return s.data[s.size-1]
+}
+
 func (s *Stack) IsEmpty() bool {
 	return s.size == 0
 }
