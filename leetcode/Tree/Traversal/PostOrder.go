@@ -4,10 +4,11 @@ import (
 	"fmt"
 
 	stack "github.com/go_problem_solving/leetcode/Stack"
+	tree "github.com/go_problem_solving/leetcode/Tree"
 )
 
 //Recursive
-func PostOrder_Recusive(root *TreeNode) {
+func PostOrder_Recusive(root *tree.TreeNode) {
 	if root == nil {
 		return
 	}
@@ -21,7 +22,7 @@ func PostOrder_Recusive(root *TreeNode) {
 	fmt.Println(root.Val) //Visit node
 }
 
-/* func PostOrder_Iterative_1_Stack(root *TreeNode) {
+/* func PostOrder_Iterative_1_Stack(root *tree.TreeNode) {
 	if root == nil {
 		return
 	}
@@ -33,7 +34,7 @@ func PostOrder_Recusive(root *TreeNode) {
 			s.Push(curr)
 			curr = curr.Left
 		} else {
-			poped := s.Peek().(*TreeNode)
+			poped := s.Peek().(*tree.TreeNode)
 			if poped.Right != nil {
 				curr = poped.Right
 			} else {
@@ -43,7 +44,7 @@ func PostOrder_Recusive(root *TreeNode) {
 	}
 } */
 
-func PostOrder_Iterative_2_Stack(root *TreeNode) {
+func PostOrder_Iterative_2_Stack(root *tree.TreeNode) {
 	if root == nil {
 		return
 	}
@@ -53,7 +54,7 @@ func PostOrder_Iterative_2_Stack(root *TreeNode) {
 
 	for !s1.IsEmpty() {
 		poped := s1.Pop()
-		node, _ := poped.(*TreeNode)
+		node, _ := poped.(*tree.TreeNode)
 
 		s2.Push(node)
 		if node.Left != nil {
@@ -66,7 +67,7 @@ func PostOrder_Iterative_2_Stack(root *TreeNode) {
 
 	for !s2.IsEmpty() {
 		poped := s2.Pop()
-		node, _ := poped.(*TreeNode)
+		node, _ := poped.(*tree.TreeNode)
 		fmt.Println(node.Val) //Visit node
 	}
 }

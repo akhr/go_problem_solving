@@ -4,10 +4,11 @@ import (
 	"fmt"
 
 	stack "github.com/go_problem_solving/leetcode/Stack"
+	tree "github.com/go_problem_solving/leetcode/Tree"
 )
 
 //Recursive
-func PreOrder_Recusive(root *TreeNode) {
+func PreOrder_Recusive(root *tree.TreeNode) {
 	if root == nil {
 		return
 	}
@@ -20,7 +21,7 @@ func PreOrder_Recusive(root *TreeNode) {
 	}
 }
 
-func PreOrder_Iterative_1_Stack(root *TreeNode) {
+func PreOrder_Iterative_1_Stack(root *tree.TreeNode) {
 	if root == nil {
 		return
 	}
@@ -28,7 +29,7 @@ func PreOrder_Iterative_1_Stack(root *TreeNode) {
 	s.Push(root)
 	for !s.IsEmpty() {
 		poped := s.Pop()
-		if node, ok := poped.(*TreeNode); ok {
+		if node, ok := poped.(*tree.TreeNode); ok {
 			fmt.Println(node.Val) //Visit node
 			if node.Right != nil {
 				s.Push(node.Right)

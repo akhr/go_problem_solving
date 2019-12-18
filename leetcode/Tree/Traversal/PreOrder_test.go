@@ -1,6 +1,10 @@
 package traversal
 
-import "testing"
+import (
+	"testing"
+
+	tree "github.com/go_problem_solving/leetcode/Tree"
+)
 
 func Test_PreOrder_Recursive(t *testing.T) {
 	tests := []struct {
@@ -20,7 +24,7 @@ func Test_PreOrder_Recursive(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		root := constructTree(tt.items, 0)
+		root := tree.ConstructIntValTree(tt.items, 0)
 		t.Run("", func(t *testing.T) {
 			PreOrder_Recusive(root)
 		})
@@ -44,7 +48,7 @@ func Test_PreOrder_Iterative_1_Stack(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		root := constructTree(tt.items, 0)
+		root := tree.ConstructIntValTree(tt.items, 0)
 		t.Run("", func(t *testing.T) {
 			PreOrder_Iterative_1_Stack(root)
 		})
