@@ -1,6 +1,10 @@
 package maxdepth104
 
-import "testing"
+import (
+	"testing"
+
+	tree "github.com/go_problem_solving/leetcode/Tree"
+)
 
 func Test_maxDepth(t *testing.T) {
 	tests := []struct {
@@ -21,7 +25,7 @@ func Test_maxDepth(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		root := constructTree(tt.items, 0)
+		root := tree.ConstructIntValTree(tt.items, 0)
 		t.Run("", func(t *testing.T) {
 			if got := maxDepth_Pre(root); got != tt.want {
 				t.Errorf("maxDepth() = %v, want %v", got, tt.want)
