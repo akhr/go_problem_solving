@@ -3,8 +3,8 @@ package binarytreeleveltraversal102
 import (
 	"container/list"
 
-	queue "github.com/go_problem_solving/leetcode/Queue"
 	tree "github.com/go_problem_solving/leetcode/Tree"
+	queue "github.com/go_problem_solving/leetcode/datastructures/Queue"
 )
 
 func levelOrder_list_pkg(root *tree.TreeNode) [][]int {

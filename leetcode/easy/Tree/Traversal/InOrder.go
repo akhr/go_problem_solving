@@ -3,8 +3,8 @@ package traversal
 import (
 	"fmt"
 
-	stack "github.com/go_problem_solving/leetcode/Stack"
 	tree "github.com/go_problem_solving/leetcode/Tree"
+	stack "github.com/go_problem_solving/leetcode/datastructures/Stack"
 )
 
 //Recursive
