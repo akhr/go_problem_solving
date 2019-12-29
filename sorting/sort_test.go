@@ -100,3 +100,16 @@ func Test_mergeSort(t *testing.T) {
 		})
 	}
 }
+
+func Test_quickSort(t *testing.T) {
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			want := make([]int, len(tt.args.arr))
+			copy(want, tt.args.arr)
+			sort.Ints(want)
+			quickSort(tt.args.arr)
+			assert.Equal(t, want, tt.args.arr)
+			t.Logf("Sorted Arr :: %+v", tt.args.arr)
+		})
+	}
+}
